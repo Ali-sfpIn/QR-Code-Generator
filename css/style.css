@@ -1,0 +1,28 @@
+body {
+  background: linear-gradient(to right, blue, rgb(82, 66, 142));
+}
+.main-content {
+  width: 400px;
+  height: fit-content;
+  margin-top: 20%;
+}
+
+.generate-btn,
+input {
+  width: 80%;
+  height: 40px;
+}
+
+.generate-btn {
+  background-color: #1ef566;
+  border: none;
+}
+
+input {
+  outline: none;
+}
+
+.generate-btn:hover {
+  transform: scale(1.02);
+  transition: all 0.3s;
+}
