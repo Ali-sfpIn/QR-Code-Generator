@@ -7,10 +7,14 @@ const qrCodeContainer = document.querySelector(".qr-code-container");
 
 // Fetching data using async await
 const fetcher = async function (query) {
-  const deliver = await fetch(
-    `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${query}`
-  );
-  qrCodeContainer.querySelector("img").src = deliver.url;
+  try {
+    const deliver = await fetch(
+      `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${query}`
+    );
+    qrCodeContainer.querySelector("img").src = deliver.url;
+  } catch (error) {
+    console.error(`Error:${error.message}`);
+  }
 };
 
 // EVENT HANDLERS...
